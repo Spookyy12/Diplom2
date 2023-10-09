@@ -149,7 +149,7 @@ public class CardTest {
         mainPage.errorYear.shouldHave(Condition.exactText("Неверно указан срок действия карты"));
     }
 
-    @Test     //Баг репорт при дате и годе Неверно указан срок действия карты
+    @Test
     //
     public void dataExpiredCard() {
         var user = DataHelper.userApprovedCard();
