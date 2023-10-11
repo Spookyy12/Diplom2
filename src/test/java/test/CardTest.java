@@ -47,7 +47,7 @@ public class CardTest {
     @Test
     public void declinedCardTest() {
         var user = DataHelper.userDeclinedCard();
-        dbHelper.sendRequestForApprovedCard(user);
+        dbHelper.sendRequestForDeclinedCard(user);
         mainPage.cardHolderNumber.setValue(user.getNumber());
         mainPage.cardHolderMonthDate.setValue(user.getMonth());
         mainPage.cardHolderYearDate.setValue(user.getYear());

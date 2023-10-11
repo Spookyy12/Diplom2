@@ -28,7 +28,7 @@ public class DbHelper {    private static final RequestSpecification request = n
                 .body("status", equalTo("APPROVED"));
     }
 
-    public void sendRequestForApprovedCard(DataHelper.UserCardDeclined card) {
+    public void sendRequestForDeclinedCard(DataHelper.UserCardDeclined card) {
         given()
                 .spec(request)
                 .body(card)
@@ -36,6 +36,6 @@ public class DbHelper {    private static final RequestSpecification request = n
                 .post("/api/v1/pay")
                 .then()
                 .statusCode(200)
-                .body("status", equalTo("APPROVED"));
+                .body("status", equalTo("DECLINED"));
     }
 }
